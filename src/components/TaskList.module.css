@@ -1,0 +1,12 @@
+.task-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.task-list-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
