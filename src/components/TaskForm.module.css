@@ -1,0 +1,32 @@
+.card {
+  width: 50%;
+  margin: auto;
+}
+
+
+.detail {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+
+.detail input {
+  padding: .7rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.detail input:focus {
+  outline: none;
+  box-shadow: 0 0 10px white;
+}
+
+.actions {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.actions button {
+  margin-left: 1rem;
+}

@@ -2,11 +2,10 @@ import React from "react";
 import TaskList from "./TaskList";
 import styles from "./Tasks.module.css";
 
-const Tasks = () => {
+const Tasks = (props) => {
 	return (
 		<div className={styles["tasks-main-page"]}>
-			<h2>Your Tasks</h2>
-			<TaskList />
+			<TaskList tasks={props.tasks} />
 		</div>
 	);
 };

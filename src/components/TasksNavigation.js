@@ -1,36 +1,28 @@
-// Dependencies import
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-// CSS import
-import styles from "./MainNavigation.module.css";
+import styles from "./TasksNavigation.module.css";
 
-const MainNavigation = () => {
+const TasksNavigation = () => {
 	return (
-		<nav>
+		<nav className={styles.navigation}>
 			<ul className={styles.list}>
-				<li>
-					<NavLink
-						to="/"
-						className={({ isActive }) => (isActive ? styles.active : undefined)}
-					>
-						Home
-					</NavLink>
-				</li>
-				<li>
-					<NavLink
-						to="/auth?mode=login"
-						className={({ isActive }) => (isActive ? styles.active : undefined)}
-					>
-						Authentication
-					</NavLink>
-				</li>
 				<li>
 					<NavLink
 						to="/tasks"
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
+						end
 					>
-						Tasks
+						All Tasks
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to="/tasks/new"
+						className={({ isActive }) => (isActive ? styles.active : undefined)}
+						end
+					>
+						New Task
 					</NavLink>
 				</li>
 			</ul>
@@ -38,4 +30,4 @@ const MainNavigation = () => {
 	);
 };
 
-export default MainNavigation;
+export default TasksNavigation;

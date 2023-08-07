@@ -14,3 +14,7 @@
   text-decoration: underline;
   color: gold;
 }
+
+.list li a.active {
+  color: gold;
+}

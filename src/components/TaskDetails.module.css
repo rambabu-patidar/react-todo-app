@@ -1,0 +1,42 @@
+.card {
+  width: 50%;
+  margin: auto;
+}
+
+.details h2 {
+  text-align: center;
+}
+
+.table {
+  width: 70%;
+  margin: 2rem auto 0;
+
+}
+
+.header-row {
+  background-color: #454545;
+}
+
+th {
+  text-align: left;
+}
+
+.table,
+th,
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem;
+}
+
+tbody th {
+  font-weight: 500;
+}
+
+tbody tr:hover {
+  background-color: #292929;
+}

@@ -1,7 +1,7 @@
 .login-form {
   width: 50%;
   margin: inherit;
-  border: 2px solid rgba(255, 255, 255, 0.534);
+  border: 2px solid #ffffff88;
 }
 
 .login-form:hover {
@@ -29,11 +29,7 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   text-align: left;
-}
-
-.detail label {
-  margin-top: 0.7rem;
-
+  align-items: center;
 }
 
 .detail input {

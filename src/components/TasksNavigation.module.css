@@ -1,0 +1,25 @@
+.navigation {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+}
+
+.list li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  background-color: grey;
+  color: black;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+.list li a.active {
+  background-color: white;
+}

@@ -3,14 +3,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import AuthPage from "./pages/Auth";
-import TasksPage from "./pages/Tasks";
-import RootPage from "./pages/Root";
+import TasksPage, { loader as tasksLoader } from "./pages/Tasks";
+import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
+import NewTaskPage, { action as newTaskAction } from "./pages/NewTask";
+import TasksRootLayout from "./pages/TasksRoot";
+import TaskDetailsPage, {
+	loader as taskDetailsLoader,
+} from "./pages/TaskDetails";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <RootPage />,
+		element: <RootLayout />,
 		errorElement: <ErrorPage />,
 		children: [
 			{
@@ -23,7 +28,24 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/tasks",
-				element: <TasksPage />,
+				element: <TasksRootLayout />,
+				children: [
+					{
+						index: true,
+						element: <TasksPage />,
+						loader: tasksLoader,
+					},
+					{
+						path: "/tasks/new",
+						element: <NewTaskPage />,
+						action: newTaskAction,
+					},
+					{
+						path: "/tasks/:taskId",
+						element: <TaskDetailsPage />,
+						loader: taskDetailsLoader,
+					},
+				],
 			},
 		],
 	},

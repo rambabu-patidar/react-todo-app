@@ -28,13 +28,10 @@
 .detail {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  align-items: center;
   text-align: left;
 }
 
-.detail label {
-  margin-top: 0.7rem;
-
-}
 
 .detail input {
   padding: .7rem;
@@ -54,6 +51,7 @@
 }
 
 .actions a {
+  text-decoration: none;
   padding: 0.7rem 2rem;
   border-radius: 10px;
   background-color: white;
@@ -61,8 +59,4 @@
   font: inherit;
   border: none;
   outline: none;
-}
-
-.actions a {
-  text-decoration: none;
 }

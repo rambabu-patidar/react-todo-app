@@ -7,7 +7,12 @@ const Button = (props) => {
 		props.className ? props.className : ""
 	}`;
 	return (
-		<button className={className} onClick={props.onClick} type={props.type}>
+		<button
+			className={className}
+			onClick={props.onClick}
+			type={props.type}
+			disabled={props.disabled}
+		>
 			{props.children}
 		</button>
 	);
