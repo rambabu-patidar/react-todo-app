@@ -1,0 +1,27 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 75vh;
+}
+
+.loading p {
+  font-size: large;
+}
+
+.icon {
+  font-size: 5rem;
+  animation: rotate 1s linear 0ms infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg)
+  }
+}

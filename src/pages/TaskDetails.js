@@ -1,10 +1,10 @@
 import React from "react";
-import { useLoaderData, json } from "react-router-dom";
+import { useRouteLoaderData, json } from "react-router-dom";
 
 import TaskDetails from "../components/TaskDetails";
 
 const TaskDetailsPage = () => {
-	const task = useLoaderData();
+	const task = useRouteLoaderData("task-details");
 
 	return <TaskDetails task={task} />;
 };

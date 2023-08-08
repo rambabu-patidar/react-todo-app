@@ -22,7 +22,7 @@ const TaskDetails = (props) => {
 						</tr>
 						<tr>
 							<th>Status</th>
-							<td>{props.task.status ? "Complete" : "InComplete"}</td>
+							<td>{props.task.status ? "Completed" : "InComplete"}</td>
 						</tr>
 						<tr>
 							<th>Deadline</th>

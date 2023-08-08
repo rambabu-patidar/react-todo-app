@@ -1,8 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSubmit } from "react-router-dom";
 
 import { FaEdit, FaCheck } from "react-icons/fa";
 import { MdDelete, MdLowPriority, MdClose } from "react-icons/md";
+import { FiCheck } from "react-icons/fi";
 
 import Card from "./UI/Card";
 
@@ -10,15 +11,37 @@ import styles from "./TaskItem.module.css";
 
 const TaskItem = (props) => {
 	const navigate = useNavigate();
+	const submit = useSubmit();
 
 	const showTaskHandler = () => {
 		navigate(`/tasks/${props.id}`);
+		console.log("task div is clicked");
 	};
 
-	const onEditTaskHandler = () => {};
-	const onDeleteTaskHandler = () => {};
-	const onToggleStatusHandler = () => {};
-	const onPriorityTaskHandler = () => {};
+	const onEditTaskHandler = (event) => {
+		event.stopPropagation();
+
+		navigate(`/tasks/${props.id}/edit`);
+	};
+
+	const onDeleteTaskHandler = (event) => {
+		event.stopPropagation();
+
+		submit({ id: props.id }, { method: "DELETE", encType: "application/json" });
+	};
+
+	const onToggleStatusHandler = (event) => {
+		event.stopPropagation();
+
+		submit(
+			{ id: props.id, status: props.status },
+			{ method: "PUT", encType: "application/json" }
+		);
+	};
+
+	const onPriorityTaskHandler = (event) => {
+		event.stopPropagation();
+	};
 
 	return (
 		<Card className={styles["task-item"]} onClick={showTaskHandler}>
@@ -41,7 +64,7 @@ const TaskItem = (props) => {
 				</li>
 				<li>
 					{props.status ? (
-						<FaCheck
+						<FiCheck
 							className={styles.icon}
 							title="completed task"
 							onClick={onToggleStatusHandler}

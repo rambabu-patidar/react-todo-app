@@ -7,7 +7,6 @@ import styles from "./TaskList.module.css";
 const TaskList = (props) => {
 	const { tasks } = props;
 
-	console.log(tasks);
 	return (
 		<Card className={styles["task-list"]}>
 			{tasks.length ? (
