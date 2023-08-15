@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../UI/Card";
+import { Link } from "react-router-dom";
 
 import styles from "./TaskDetails.module.css";
 
@@ -38,6 +39,9 @@ const TaskDetails = (props) => {
 						</tr>
 					</tbody>
 				</table>
+				<div className={styles.back}>
+					<Link to="/tasks">Back</Link>
+				</div>
 			</section>
 		</Card>
 	);

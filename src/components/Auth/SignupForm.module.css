@@ -60,3 +60,12 @@
   border: none;
   outline: none;
 }
+
+.detail input.invalid {
+  outline: 2px solid red;
+}
+
+.disabled {
+  cursor: not-allowed;
+  background-color: grey;
+}

@@ -4,3 +4,7 @@
   text-align: center;
   min-height: 70vh;
 }
+
+.message {
+  padding: 1rem 0 0 0;
+}

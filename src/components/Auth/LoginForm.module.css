@@ -62,3 +62,7 @@
 .actions a {
   text-decoration: none;
 }
+
+.detail input.invalid {
+  outline: 2px solid red;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useSubmit } from "react-router-dom";
 
 import { FaEdit } from "react-icons/fa";
-import { MdDelete, MdLowPriority, MdClose } from "react-icons/md";
+import { MdDelete, MdClose } from "react-icons/md";
 import { FiCheck } from "react-icons/fi";
 
 import Card from "../UI/Card";
@@ -47,10 +47,6 @@ const TaskItem = (props) => {
 		);
 	};
 
-	const onPriorityTaskHandler = (event) => {
-		event.stopPropagation();
-	};
-
 	return (
 		<Card className={styles["task-item"]} onClick={showTaskHandler}>
 			<div className={styles.title}>{props.title}</div>
@@ -84,13 +80,6 @@ const TaskItem = (props) => {
 							onClick={onToggleStatusHandler}
 						/>
 					)}
-				</li>
-				<li>
-					<MdLowPriority
-						className={styles.icon}
-						title="edit priority"
-						onClick={onPriorityTaskHandler}
-					/>
 				</li>
 			</ul>
 		</Card>

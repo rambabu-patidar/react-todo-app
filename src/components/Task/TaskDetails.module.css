@@ -10,7 +10,6 @@
 .table {
   width: 70%;
   margin: 2rem auto 0;
-
 }
 
 .header-row {
@@ -39,4 +38,25 @@ tbody th {
 
 tbody tr:hover {
   background-color: #292929;
+}
+
+.back {
+  text-align: center;
+  margin: 1rem auto 0;
+}
+
+.back a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+.back a:hover {
+  background-color: grey;
 }

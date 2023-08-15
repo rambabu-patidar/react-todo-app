@@ -22,6 +22,9 @@ const Auth = () => {
 		<Card className={styles["auth-card"]}>
 			<h1 className={styles.heading}>Welcome, to our Todo App</h1>
 			{authForm}
+			<p className={styles.message}>
+				Currently the authentication doesn't work
+			</p>
 		</Card>
 	);
 };
