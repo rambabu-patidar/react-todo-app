@@ -11,7 +11,7 @@ const MainNavigation = () => {
 			<ul className={styles.list}>
 				<li>
 					<NavLink
-						to="/"
+						to=""
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 					>
 						Home
@@ -19,7 +19,7 @@ const MainNavigation = () => {
 				</li>
 				<li>
 					<NavLink
-						to="/auth?mode=login"
+						to="auth?mode=login"
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 					>
 						Authentication
@@ -27,7 +27,7 @@ const MainNavigation = () => {
 				</li>
 				<li>
 					<NavLink
-						to="/tasks"
+						to="tasks"
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 					>
 						Tasks

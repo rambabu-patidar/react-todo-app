@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate, useSubmit } from "react-router-dom";
 
-import { FaEdit, FaCheck } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 import { MdDelete, MdLowPriority, MdClose } from "react-icons/md";
 import { FiCheck } from "react-icons/fi";
 
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 
 import styles from "./TaskItem.module.css";
 
@@ -14,20 +14,28 @@ const TaskItem = (props) => {
 	const submit = useSubmit();
 
 	const showTaskHandler = () => {
-		navigate(`/tasks/${props.id}`);
+		navigate(props.id);
 		console.log("task div is clicked");
 	};
 
 	const onEditTaskHandler = (event) => {
 		event.stopPropagation();
 
-		navigate(`/tasks/${props.id}/edit`);
+		navigate(`${props.id}/edit`);
 	};
 
 	const onDeleteTaskHandler = (event) => {
 		event.stopPropagation();
-
-		submit({ id: props.id }, { method: "DELETE", encType: "application/json" });
+		const confirmed = window.confirm(
+			"Are you sure, you want to delete this task?"
+		);
+		if (confirmed) {
+			submit(
+				{ id: props.id },
+				{ method: "DELETE", encType: "application/json" }
+			);
+		}
+		return;
 	};
 
 	const onToggleStatusHandler = (event) => {

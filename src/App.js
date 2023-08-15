@@ -27,11 +27,11 @@ const router = createBrowserRouter([
 				element: <HomePage />,
 			},
 			{
-				path: "/auth",
+				path: "auth",
 				element: <AuthPage />,
 			},
 			{
-				path: "/tasks",
+				path: "tasks",
 				element: <TasksRootLayout />,
 				children: [
 					{
@@ -41,12 +41,12 @@ const router = createBrowserRouter([
 						action: tasksAction,
 					},
 					{
-						path: "/tasks/new",
+						path: "new",
 						element: <NewTaskPage />,
 						action: newTaskAction,
 					},
 					{
-						path: "/tasks/:taskId",
+						path: ":taskId",
 						id: "task-details", // this will help use to get the loader data of this route to another nested route.
 						loader: taskDetailsLoader,
 						children: [
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
 								element: <TaskDetailsPage />,
 							},
 							{
-								path: "/tasks/:taskId/edit",
+								path: "edit",
 								element: <EditTaskPage />,
 								action: editTaskAction,
 							},

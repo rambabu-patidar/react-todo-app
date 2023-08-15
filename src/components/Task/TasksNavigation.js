@@ -9,7 +9,7 @@ const TasksNavigation = () => {
 			<ul className={styles.list}>
 				<li>
 					<NavLink
-						to="/tasks"
+						to=""
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
 					>
@@ -18,7 +18,7 @@ const TasksNavigation = () => {
 				</li>
 				<li>
 					<NavLink
-						to="/tasks/new"
+						to="new"
 						className={({ isActive }) => (isActive ? styles.active : undefined)}
 						end
 					>

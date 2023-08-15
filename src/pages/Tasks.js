@@ -1,7 +1,7 @@
 import React from "react";
 import { json, redirect, useLoaderData } from "react-router-dom";
 
-import Tasks from "../components/Tasks";
+import Tasks from "../components/Task/Tasks";
 
 const TasksPage = () => {
 	const tasks = useLoaderData();
@@ -50,7 +50,7 @@ export async function action({ request, params }) {
 	let URL;
 	let requestInit;
 	let errorMessage;
-	console.log(method);
+	// console.log(method);
 	if (method === "DELETE") {
 		URL = `https://todo-app-27b19-default-rtdb.asia-southeast1.firebasedatabase.app/tasks/${id}/.json`;
 		requestInit = {

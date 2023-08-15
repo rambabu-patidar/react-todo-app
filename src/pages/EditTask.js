@@ -1,6 +1,6 @@
 import React from "react";
 import { json, useRouteLoaderData, redirect } from "react-router-dom";
-import TaskForm from "../components/TaskForm";
+import TaskForm from "../components/Task/TaskForm";
 
 const EditTaskPage = () => {
 	const task = useRouteLoaderData("task-details");

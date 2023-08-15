@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
-import todoImage from "../assets/todo.png";
+import todoImage from "../../assets/todo.png";
 
 const Home = () => {
 	return (

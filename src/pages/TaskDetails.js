@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouteLoaderData, json } from "react-router-dom";
 
-import TaskDetails from "../components/TaskDetails";
+import TaskDetails from "../components/Task/TaskDetails";
 
 const TaskDetailsPage = () => {
 	const task = useRouteLoaderData("task-details");

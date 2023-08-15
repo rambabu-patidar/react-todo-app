@@ -1,5 +1,5 @@
 import React from "react";
-import TaskForm from "../components/TaskForm";
+import TaskForm from "../components/Task/TaskForm";
 import { json, redirect } from "react-router-dom";
 
 const NewTaskPage = () => {

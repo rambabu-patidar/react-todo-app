@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate, Form, useNavigation } from "react-router-dom";
 
 import styles from "./TaskForm.module.css";
-import Button from "./UI/Button";
-import Card from "./UI/Card";
+import Button from "../UI/Button";
+import Card from "../UI/Card";
 
 const TaskForm = ({ task }) => {
 	const navigate = useNavigate();

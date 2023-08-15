@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import SignupForm from "./SignupForm";
 import LoginForm from "./LoginForm";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 
 import styles from "./Auth.module.css";
 

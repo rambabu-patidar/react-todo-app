@@ -1,7 +1,7 @@
 import React from "react";
 
 import TaskItem from "./TaskItem";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 import styles from "./TaskList.module.css";
 
 const TaskList = (props) => {
